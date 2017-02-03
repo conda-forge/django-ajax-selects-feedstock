@@ -1,4 +1,4 @@
-{% set version = "1.5.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: django-ajax-selects
@@ -6,8 +6,8 @@ package:
 
 source:
   fn: django-ajax-selects-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/d/django-ajax-selects/django-ajax-selects-{{ version }}.tar.gz
-  sha256: 8ca9b2f153507bf814386349778f7ee136f769d3a12c05fbcb567650cad9886b
+  url: https://github.com/crucialfelix/django-ajax-selects/archive/{{ version }}.tar.gz
+  sha256: 0e48486b4cc45c7d9ca96e21c501796dbc08b4aa079087c5ed525e8b797857a3
 
 build:
   number: 0
@@ -28,7 +28,7 @@ test:
 about:
   home: https://github.com/crucialfelix/django-ajax-selects/
   license: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: LICENSE
   summary: 'Edit ForeignKey, ManyToManyField and CharField in Django Admin using jQuery UI AutoComplete.'
 
 extra:
