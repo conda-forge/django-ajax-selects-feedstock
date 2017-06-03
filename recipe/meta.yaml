@@ -1,4 +1,4 @@
-{% set version = "1.5.2" %}
+{% set version = "1.6.0" %}
 
 package:
   name: django-ajax-selects
@@ -7,7 +7,7 @@ package:
 source:
   fn: django-ajax-selects-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/d/django-ajax-selects/django-ajax-selects-{{ version }}.tar.gz
-  sha256: 8ca9b2f153507bf814386349778f7ee136f769d3a12c05fbcb567650cad9886b
+  sha256: a8200eaca4e9bb8269cf69a9b50f01a5efee75eceb2279e29cd2fcf56de96b0a
 
 build:
   number: 0
