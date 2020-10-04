@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -24,11 +24,15 @@ requirements:
 test:
   imports:
     - ajax_select
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/crucialfelix/django-ajax-selects/
   license: MIT
-  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
+  license_file: ajax_select/LICENSE
   summary: Edit ForeignKey, ManyToManyField and CharField in Django Admin using jQuery UI AutoComplete.
 
 extra:
