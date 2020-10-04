@@ -32,7 +32,7 @@ test:
 about:
   home: https://github.com/crucialfelix/django-ajax-selects/
   license: MIT
-  license_file: ajax_select/LICENSE
+  license_file: LICENSE
   summary: Edit ForeignKey, ManyToManyField and CharField in Django Admin using jQuery UI AutoComplete.
 
 extra:
