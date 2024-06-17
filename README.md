@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/django-ajax-sel
 
 Home: https://github.com/crucialfelix/django-ajax-selects/
 
-Package license: MIT
+Package license: MIT AND GPL-3.0-or-later
 
 Summary: Edit ForeignKey, ManyToManyField and CharField in Django Admin using jQuery UI AutoComplete.
 
