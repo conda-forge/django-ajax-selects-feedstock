@@ -25,7 +25,7 @@ requirements:
 
 test:
   imports:
-    - django_ajax_selects
+    - ajax_select
   commands:
     - pip check
   requires:
