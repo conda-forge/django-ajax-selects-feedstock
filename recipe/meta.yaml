@@ -1,29 +1,31 @@
+{% set name = "django-ajax-selects" %}
 {% set version = "3.0.2" %}
 
 package:
-  name: django-ajax-selects
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/django-ajax-selects/django_ajax_selects-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django_ajax_selects-{{ version }}.tar.gz
   sha256: 8554659f5c7da50cfe1f0d0e14c6f360d0f2ab2d94b24e3203cc4fe974bd945a
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.10,<4.0
+    - poetry-core
     - pip
   run:
-    - python >=3.6
-    - django >=3,<=4
+    - python >=3.10.0,<4.0.0
+    - django >=3.2
 
 test:
   imports:
-    - ajax_select
+    - django_ajax_selects
   commands:
     - pip check
   requires:
@@ -31,7 +33,7 @@ test:
 
 about:
   home: https://github.com/crucialfelix/django-ajax-selects/
-  license: MIT
+  license: MIT AND GPL-3.0-or-later
   license_file: LICENSE
   summary: Edit ForeignKey, ManyToManyField and CharField in Django Admin using jQuery UI AutoComplete.
 
