@@ -1,5 +1,5 @@
 {% set name = "django-ajax-selects" %}
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django_ajax_selects-{{ version }}.tar.gz
-  sha256: 8554659f5c7da50cfe1f0d0e14c6f360d0f2ab2d94b24e3203cc4fe974bd945a
+  sha256: 650071c78c333139059e00a41e9aeff21234e026f2076965429594f5c5327f35
 
 build:
   noarch: python
