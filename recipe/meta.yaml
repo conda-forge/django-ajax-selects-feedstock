@@ -1,3 +1,4 @@
+{% set python_min = '3.10.0' %}
 {% set name = "django-ajax-selects" %}
 {% set version = "3.0.3" %}
 
@@ -6,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django_ajax_selects-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_ajax_selects-{{ version }}.tar.gz
   sha256: 650071c78c333139059e00a41e9aeff21234e026f2076965429594f5c5327f35
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.10.0,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - django >=3.2
 
 test:
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/crucialfelix/django-ajax-selects/
